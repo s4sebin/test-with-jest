@@ -60,7 +60,7 @@ describe("calculator", () => {
     render(<Calculator />);
     const field1 = screen.getByLabelText("Number 1:");
     const field2 = screen.getByLabelText("Number 2:");
-    const button = screen.getByText("Subtract");
+    const button = screen.getByText("Multiply");
     const resultText = screen.getByTestId("result");
 
     fireEvent.change(field1, {
@@ -70,6 +70,22 @@ describe("calculator", () => {
       target: { value: 3 },
     });
     fireEvent.click(button);
-    expect(resultText).toHaveTextContent("-1");
+    expect(resultText).toHaveTextContent("6");
+  });
+  it("Division Operation", () => {
+    render(<Calculator />);
+    const field1 = screen.getByLabelText("Number 1:");
+    const field2 = screen.getByLabelText("Number 2:");
+    const button = screen.getByText("Divide");
+    const resultText = screen.getByTestId("result");
+
+    fireEvent.change(field1, {
+      target: { value: 2 },
+    });
+    fireEvent.change(field2, {
+      target: { value: 2 },
+    });
+    fireEvent.click(button);
+    expect(resultText).toHaveTextContent("1");
   });
 });
