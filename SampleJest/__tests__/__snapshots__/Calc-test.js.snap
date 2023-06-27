@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 32,
+        "fontWeight": "bold",
+        "marginBottom": 32,
+      }
+    }
+  >
+    CALCULATOR
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "grey",
+          "fontSize": 16,
+          "marginBottom": 8,
+        }
+      }
+    >
+      PRIMARY VALUE
+    </Text>
+    <TextInput
+      editable={true}
+      keyboardType="numeric"
+      onChangeText={[Function]}
+      style={
+        Array [
+          undefined,
+          Object {
+            "borderColor": "black",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "color": "black",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "marginBottom": 18,
+            "padding": 8,
+            "width": 160,
+          },
+          undefined,
+          false,
+        ]
+      }
+      value="0"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "grey",
+          "fontSize": 16,
+          "marginBottom": 8,
+        }
+      }
+    >
+      SECONDARY VALUE
+    </Text>
+    <TextInput
+      editable={true}
+      keyboardType="numeric"
+      onChangeText={[Function]}
+      style={
+        Array [
+          undefined,
+          Object {
+            "borderColor": "black",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "color": "black",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "marginBottom": 18,
+            "padding": 8,
+            "width": 160,
+          },
+          undefined,
+          false,
+        ]
+      }
+      value="0"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-evenly",
+        "marginVertical": 16,
+        "maxWidth": 400,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "grey",
+          "borderRadius": 5,
+          "justifyContent": "center",
+          "margin": 10,
+          "opacity": 1,
+          "padding": 8,
+          "paddingHorizontal": 12,
+        }
+      }
+    >
+      <Text>
+        Add
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "grey",
+          "borderRadius": 5,
+          "justifyContent": "center",
+          "margin": 10,
+          "opacity": 1,
+          "padding": 8,
+          "paddingHorizontal": 12,
+        }
+      }
+    >
+      <Text>
+        Sub
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "grey",
+          "borderRadius": 5,
+          "justifyContent": "center",
+          "margin": 10,
+          "opacity": 1,
+          "padding": 8,
+          "paddingHorizontal": 12,
+        }
+      }
+    >
+      <Text>
+        Mul
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "grey",
+          "borderRadius": 5,
+          "justifyContent": "center",
+          "margin": 10,
+          "opacity": 1,
+          "padding": 8,
+          "paddingHorizontal": 12,
+        }
+      }
+    >
+      <Text>
+        Div
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "grey",
+          "fontSize": 16,
+          "marginBottom": 8,
+        }
+      }
+    >
+      RESULT
+    </Text>
+    <TextInput
+      editable={false}
+      keyboardType="numeric"
+      style={
+        Array [
+          undefined,
+          Object {
+            "borderColor": "black",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "color": "black",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "marginBottom": 18,
+            "padding": 8,
+            "width": 160,
+          },
+          Object {
+            "textAlign": "center",
+          },
+          Object {
+            "backgroundColor": "lightgreen",
+            "color": "black",
+          },
+        ]
+      }
+      value="0"
+    />
+  </View>
+</View>
+`;
