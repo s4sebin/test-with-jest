@@ -59,6 +59,6 @@ describe("Calculator", () => {
         fireEvent.click(addButton);
         expect(result).toHaveTextContent('5');
     });
-
+    // Test commit
 });
 
