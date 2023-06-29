@@ -1,0 +1,94 @@
+.container {
+  margin: 0 auto;
+  margin-top: 220px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1d2103;
+  padding: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.input-box {
+  width: 400px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  /* Background color */
+  border: none;
+  /* Remove border */
+  color: white;
+  /* Text color */
+  padding: 10px 20px;
+  margin: 0 auto;
+  /* Padding around the content */
+  text-align: center;
+  /* Center align text */
+  text-decoration: none;
+  /* Remove underline */
+  display: inline-block;
+  width: 120px;
+  /* Display as inline block */
+  font-size: 16px;
+  /* Font size */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Cursor on hover */
+  margin-bottom: 20px;
+}
+
+.home-button {
+  background-color: #4CAF50;
+  /* Background color */
+  border: none;
+  /* Remove border */
+  color: white;
+  /* Text color */
+  padding: 10px 20px;
+  margin: 0 auto;
+  /* Padding around the content */
+  text-align: center;
+  /* Center align text */
+  text-decoration: none;
+  /* Remove underline */
+  display: inline-block;
+  /* Display as inline block */
+  font-size: 16px;
+  /* Font size */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Cursor on hover */
+  /* margin-bottom: 20px; */
+}
+
+.header {
+  width: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.all-button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.answer {
+  color: #4CAF50;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
