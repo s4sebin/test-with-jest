@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Alert, Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles.js';
-import {Input} from '../components/Input.js';
+import { Input } from '../../components/Input.js';
 
 const OperationsConst = {
   SUM: 'SUM',
@@ -12,30 +12,24 @@ const OperationsConst = {
 
 export default function Calculator() {
   function clearResult() {
-    setOperation(null);
     setResult(0);
   }
 
   function handleSum() {
-    setOperation(OperationsConst.SUM);
     setResult(Number(firstValue) + Number(secondValue));
   }
 
   function handleSubtraction() {
-    setOperation(OperationsConst.SUBTRACTION);
     setResult(Number(firstValue) - Number(secondValue));
   }
 
   function handleMultiplication() {
-    setOperation(OperationsConst.MULTIPLICATION);
     setResult(Number(firstValue) * Number(secondValue));
   }
 
   function handleDivision() {
-    setOperation(OperationsConst.DIVISION);
-
     if (secondValue === 0) {
-      Alert.alert('Aviso', 'Não pode fazer divisão por 0 (zero)!!!');
+      Alert.alert('Errorr! Number cannot divided by 0');
     } else {
       setResult(Number(firstValue) / Number(secondValue));
     }
@@ -44,7 +38,6 @@ export default function Calculator() {
   let [firstValue, setFirstValue] = useState(0);
   let [secondValue, setSecondValue] = useState(0);
   let [result, setResult] = useState(0);
-  let [operation, setOperation] = useState(null);
 
   useEffect(() => {
     clearResult();
@@ -55,6 +48,7 @@ export default function Calculator() {
       <Text style={styles.title}>CALCULATOR</Text>
 
       <Input
+        testID="testPrimaryValue"
         editable={true}
         label="PRIMARY VALUE"
         value={firstValue}
@@ -62,6 +56,7 @@ export default function Calculator() {
       />
 
       <Input
+        testID="testSecondaryValue"
         editable={true}
         label="SECONDARY VALUE"
         value={secondValue}
@@ -69,30 +64,42 @@ export default function Calculator() {
       />
 
       <View style={styles.iconsContainer}>
-        <TouchableOpacity style={styles.buttonContainer} onPress={handleSum} testID="sumButton">
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={handleSum}
+          testID="sumButton">
           <Text>Add</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.buttonContainer}
-          onPress={handleSubtraction}>
+          onPress={handleSubtraction}
+          testID="subButton">
           <Text>Sub</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.buttonContainer}
-          onPress={handleMultiplication}>
+          onPress={handleMultiplication}
+          testID="mulButton">
           <Text>Mul</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.buttonContainer}
+          testID="divButton"
           onPress={handleDivision}>
           <Text>Div</Text>
         </TouchableOpacity>
       </View>
 
-      <Input centralize={true} editable={false} label="RESULT" value={result} />
+      <Input
+        centralize={true}
+        testID="resultValue"
+        editable={false}
+        label="RESULT"
+        value={result}
+      />
     </View>
   );
 }

@@ -2,12 +2,13 @@ import React from 'react';
 import {Text, TextInput, View} from 'react-native';
 
 export function Input(props) {
-  let {centralize, editable, label, value, onChangeText , style} = props;
+  let {centralize, editable, label, value, onChangeText, style, testID} = props;
 
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
       <TextInput
+        testID={testID}
         editable={editable}
         keyboardType="numeric"
         style={[

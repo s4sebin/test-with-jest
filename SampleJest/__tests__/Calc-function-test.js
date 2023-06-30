@@ -4,23 +4,41 @@
 
 import 'react-native';
 import React from 'react';
-import Calculator from '../app/Screens/Calculator';
+import {render, fireEvent} from '@testing-library/react-native';
+import Calculator from '../app/Screens/Calculator/Calculator';
 
-// Note: test renderer must be required after react-native.
-// import renderer from 'react-test-renderer';
-import {shallow} from 'enzyme';
+test('test code sum', () => {
+  const {getByTestId} = render(<Calculator />);
+  fireEvent.changeText(getByTestId('testPrimaryValue'), 15);
+  fireEvent.changeText(getByTestId('testSecondaryValue'), 15);
+  fireEvent.press(getByTestId('sumButton'));
+  const result = getByTestId('resultValue');
+  expect(result.props.value).toEqual('30');
+});
 
-describe('Counter', () => {
-  let calculator = shallow(<Calculator />);
+test('test code div', () => {
+  const {getByTestId} = render(<Calculator />);
+  fireEvent.changeText(getByTestId('testPrimaryValue'), 15);
+  fireEvent.changeText(getByTestId('testSecondaryValue'), 15);
+  fireEvent.press(getByTestId('divButton'));
+  const result = getByTestId('resultValue');
+  expect(result.props.value).toEqual('1');
+});
 
-  it('calls sum function when enter data and plus button is clicked', async () => {
-    await waitFor(() => {
-      expect(getByTestId('sumButton')).toBeTruthy();
-    });
-    fireEvent.press(getByTestId('sumButton'));
-    expect(counter.find('p').text()).toBe('Counter value is: 0');
-    const incButton = calculator.find('button');
-    incButton.simulate('click');
-    expect(counter.find('p').text()).toBe('Counter value is: 1');
-  });
+test('test code sub', () => {
+  const {getByTestId} = render(<Calculator />);
+  fireEvent.changeText(getByTestId('testPrimaryValue'), 15);
+  fireEvent.changeText(getByTestId('testSecondaryValue'), 15);
+  fireEvent.press(getByTestId('subButton'));
+  const result = getByTestId('resultValue');
+  expect(result.props.value).toEqual('0');
+});
+
+test('test code mul', () => {
+  const {getByTestId} = render(<Calculator />);
+  fireEvent.changeText(getByTestId('testPrimaryValue'), 15);
+  fireEvent.changeText(getByTestId('testSecondaryValue'), 15);
+  fireEvent.press(getByTestId('mulButton'));
+  const result = getByTestId('resultValue');
+  expect(result.props.value).toEqual('225');
 });
